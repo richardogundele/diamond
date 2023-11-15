@@ -3,9 +3,7 @@ from pymongo import MongoClient
 
 '''MONGODB DATABASE - to store user emails, conversations of users'''
 
-# password = os.getenv("mongopassword")
-
-password = "gbogO2020$"
+password = os.getenv("mongopassword")
 
 mongo_uri = f"mongodb+srv://richardogundele:{password}@cluster0.jfqn1lj.mongodb.net/?retryWrites=true&w=majority"
 
