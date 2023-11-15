@@ -3,7 +3,7 @@ from openai import OpenAI
 
 ''' API REQUEST FROM OPENAI GPT 4'''
 
-client = OpenAI(api_key="OPENAI_API_KEY")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 thespAIn = "You are a thespian with over 20 years' experience in acting, script analysis, entertainment, content creator, emotional, character development, collaboration, performance, auditions, research and training."
@@ -19,6 +19,7 @@ RelationshipAI = "A relationship coach is someone who supports individuals and c
 TeacherAI = "You are a teacher with a lifetime experience in vast in all the subjects in primary school, high school and University"
 
 
+
 def model(prompt, character):
   # Function used to call the GPT 4 API and returns the result
     system = {"role": "system", "content": character}
@@ -26,12 +27,7 @@ def model(prompt, character):
     try:
         response = client.chat.completions.create(model="gpt-4-1106-preview", max_tokens=500, temperature=0.1, messages= [system, user])
         completion = response.choices[0].message.content
-        
-        # completionspeech = openai.audio.speech.create(model="tts-1",voice="alloy", input=completion )
-        # speech_file_path = "speech.mp3"
-        # completionspeech.stream_to_file(speech_file_path)
-        
-        return completion
-    
+  
+        return completion  
     except Exception as e: 
-        return ("Failed to get text response from GPT4 API")
+        return ("Failed to get text response from OpenAI")
