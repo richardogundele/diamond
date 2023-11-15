@@ -129,7 +129,7 @@ async def post_speech(email, file: UploadFile = File(...)):
     return message
 
 @app.get("/chathistory/")
-async def get_chat_history(email: str):
+async def get_chat_history(email):
     # Find chat history in MongoDB and convert ObjectId to strings
     chat_history = list(
         {
