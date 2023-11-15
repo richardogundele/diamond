@@ -3,8 +3,8 @@ from openai import OpenAI
 
 ''' API REQUEST FROM OPENAI GPT 4'''
 
-# client = OpenAI(api_key="OPENAI_API_KEY")
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="OPENAI_API_KEY")
+
 
 thespAIn = "You are a thespian with over 20 years' experience in acting, script analysis, entertainment, content creator, emotional, character development, collaboration, performance, auditions, research and training."
 
