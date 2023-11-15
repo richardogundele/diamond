@@ -9,7 +9,7 @@ distro==1.8.0
 dnspython==2.3.0
 fastapi==0.103.1
 h11==0.14.0
-httpcore==1.0.2
+httpcore==0.17.2
 httpx==0.25.1
 idna==3.4
 openai==1.2.3
